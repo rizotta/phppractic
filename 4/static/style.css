@@ -1,0 +1,25 @@
+.list_image {
+	width: 100px;
+}
+
+.list_item {
+	position: relative;
+	display: inline-block;
+	margin: 10px;
+}
+
+.list_remove_image {
+	position: absolute;
+	top: 0;
+	right: 0;
+	display: none;
+	text-decoration: none;
+	padding: 5px 10px;
+	background: #000;
+	color: #fff;
+	font-weight: bold;
+}
+
+.list_item:hover .list_remove_image {
+	display: block;
+}
