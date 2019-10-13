@@ -5,6 +5,11 @@
 	<title>Адресная книга</title>
 </head>
 <body>
+	<a href="../">Вернуться на главную страницу</a><br>	<br>
+	<a href="/5"> Очистить адресную строку</a>	
+	<p>Admin panel: <a href="?restore">Восстановить всех удалённых</a></p>
+
+
 	<table border="1" > <!-- это лучше в css прописать-->
 		<tr>
 			<th>Id</th>
@@ -16,7 +21,7 @@
 			<th>Дата рождения</th>
 			<th>Создано</th>
 			<th>Обновлено</th>
-			<th>Действия</th>
+			<th colspan=2>Действия</th>
 		</tr>
 	
 		<?php foreach ($users as $user ): ?>
@@ -31,13 +36,17 @@
 					<td><?= $user[ 'created_at' ]?></td>
 					<td><?= $user[ 'updated_at' ]?></td>
 					<td>
-						<a href="?delete=<?= $user['id']?>">Удалить</a>
+						<a href="?deleteForever=<?= $user['id']?>">Удалить навсегда</a>
 					</td>
+					<td>
+						<a href="?delete=<?= $user['id']?>">Удалить из таблицы</a>
+					</td>
+					
 				</tr>
 			<?php endforeach ?>
 	</table>
-
-	<form method="POST"> 
+	
+	<form method="post"> 
 		<h3>Добавить пользователя</h3>
 		<div class="row">
 			<input type="text" name="name" placeholder="Имя">
@@ -54,11 +63,11 @@
 		<div class="row">
 			<input type="email" name="email" placeholder="E-mail">
 		</div>
-		<div class="row">
+		<!-- <div class="row">
 			<input type="number" name="age" placeholder="Возраст">
-		</div>
+		</div> -->
 		<div class="row">
-			<input type="date" name="birthday" placeholder="Дата рождения">
+			<input type="date" name= "birthday" placeholder="Дата рождения">
 		</div>
 		<input type="hidden" name="insert" value="1">
 		<button>Добавить</button>
