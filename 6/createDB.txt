@@ -1,0 +1,12 @@
+SQL-запрос для создания БД, с которой будет происходить работа
+
+CREATE DATABASE practic_chat
+CREATE TABLE message(
+	id INT (11) NOT NULL AUTO_INCREMENT,
+	session_id VARCHAR (255) NOT NULL,
+	username VARCHAR (255) NOT NULL,
+	message TEXT NOT NULL,
+	created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+	updated_at DATETIME on update CURRENT_TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+	PRIMARY KEY (id)
+)

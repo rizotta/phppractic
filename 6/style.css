@@ -1,0 +1,28 @@
+.chat__comment-body {
+	margin: 10px;
+	padding: 10px;
+	border: 1px solid gray;	
+	border-radius: 4px;
+	display: inline-block;
+	position: relative;
+}
+
+.chat__username, .chat__form-username {
+	font-weight: bold;
+}
+
+.chat__comment-delete {
+	position: absolute;
+	display: none;
+	top: -1px;
+	right: -1px;
+	background: #fff;
+	padding: 4px 1px;
+	border-radius: 4px;
+	border: 1px solid gray;
+	font-size: 12px;
+}
+
+.chat__comment:hover .chat__comment-delete {
+	display: block;
+}
