@@ -1,0 +1,17 @@
+SQL-запрос для создания БД, с которой будет происходить работа
+
+CREATE DATABASE gb-adress-book
+CREATE TABLE user(
+	id INT (11) NOT NULL AUTO_INCREMENT,
+	name VARCHAR (255) NOT NULL,
+	last_name VARCHAR (255) NOT NULL,
+	username VARCHAR (255) NOT NULL,
+	password VARCHAR (255) NOT NULL,
+	email VARCHAR (255) NOT NULL,
+	age INT (11) NOT NULL,
+	birthday DATENOT NULL,
+	created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+	updated_at DATETIME on update CURRENT_TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+	is_deleted BOOLEAN
+	PRIMARY KEY (id)
+)
