@@ -1,10 +1,14 @@
 .chat__comment-body {
-	margin: 10px;
-	padding: 10px;
+	margin: 5px;
+	padding: 10px 90px 10px 10px;
 	border: 1px solid gray;	
 	border-radius: 4px;
 	display: inline-block;
 	position: relative;
+}
+
+.comment-edit:hover .chat__comment-body {
+	padding: 10px;
 }
 
 .chat__username, .chat__form-username {
@@ -20,9 +24,33 @@
 	padding: 4px 1px;
 	border-radius: 4px;
 	border: 1px solid gray;
-	font-size: 12px;
+	font-size: 13px;
 }
 
-.chat__comment:hover .chat__comment-delete {
+.chat__comment-body:hover .chat__comment-delete {
 	display: block;
 }
+
+.chat__comment-update {
+	position: absolute;
+	display: none;
+	bottom: -1px;
+	right: -1px;
+	background: #fff;
+	padding: 4px 1px;
+	border-radius: 4px;
+	border: 1px solid gray;
+	font-size: 13px;
+}
+
+.chat__comment-body:hover .chat__comment-update {
+	display: block;
+}
+
+
+.chat__date {
+	color: grey;
+	margin: 2px 0;
+	font-size: 11px;
+}
+

@@ -1,12 +1,12 @@
 <?php
-require 'comments.php';				// здесь функции create_comment, update_comment, get_comments, delete_comment
-require 'contoller.php';			// здесь функция handle_action, которая обрабатывает действия над комментариями 
+require 'comments.php';				// здесь функции для CRUD + проверка собственника комментария
+require 'contoller.php';			// здесь handle_action - управление действиями над комментариями 
 
-session_start();					// включение сессии
+session_start();					// формируем сессии
 
 $db = new PDO("mysql:host=localhost;dbname=practic_chat;charset=UTF8", "mysql", "mysql");	// подключение к БД
 
-handle_action( $db );				// действие над комментарием исходя из поля $_REQUEST['action']
+handle_action( $db );				// действия над комментарием исходя из поля $_REQUEST['action']
 
 $comments = get_comments( $db );	// получаем все комментарии из базы
 
