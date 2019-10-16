@@ -1,0 +1,9 @@
+SQL-запрос для создания таблицы, с которой будет происходить работа.
+
+CREATE DATABASE practic_chat
+CREATE TABLE `user` (
+    `id` INT (11) NOT NULL AUTO_INCREMENT,
+    `username` VARCHAR (255) NOT NULL,
+    `password` TEXT NOT NULL,
+    PRIMARY KEY (id)
+)
